@@ -1,0 +1,12 @@
+name: lerobot
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - matplotlib
+      - numpy
+      # lerobot pulls in scservo_sdk and all servo drivers
+      - lerobot[feetech]
