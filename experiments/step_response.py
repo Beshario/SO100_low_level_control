@@ -12,8 +12,12 @@ What to observe:
 """
 
 import time
+from pathlib import Path
 
 import matplotlib.pyplot as plt
+
+PLOTS_DIR = Path(__file__).parent.parent / "plots"
+PLOTS_DIR.mkdir(exist_ok=True)
 
 from lerobot.motors.feetech import FeetechMotorsBus
 from lerobot.motors.motors_bus import Motor, MotorNormMode
@@ -69,5 +73,5 @@ ax.set_title("Step Response — shoulder_pan: 0° → 180°")
 ax.legend()
 ax.grid(True, alpha=0.4)
 fig.tight_layout()
-fig.savefig("step_response.png", dpi=150)
-print("Saved step_response.png")
+fig.savefig(PLOTS_DIR / "step_response.png", dpi=150)
+print(f"Saved {PLOTS_DIR / 'step_response.png'}")

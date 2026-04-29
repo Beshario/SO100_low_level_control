@@ -13,9 +13,13 @@ What to observe:
 """
 
 import time
+from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
+
+PLOTS_DIR = Path(__file__).parent.parent / "plots"
+PLOTS_DIR.mkdir(exist_ok=True)
 
 from lerobot.motors.feetech import FeetechMotorsBus
 from lerobot.motors.motors_bus import Motor, MotorNormMode
@@ -123,5 +127,5 @@ ax2.legend()
 ax2.grid(True, alpha=0.4)
 
 fig.tight_layout()
-fig.savefig("latency.png", dpi=150)
-print("Saved latency.png")
+fig.savefig(PLOTS_DIR / "latency.png", dpi=150)
+print(f"Saved {PLOTS_DIR / 'latency.png'}")
