@@ -19,8 +19,8 @@ import matplotlib.pyplot as plt
 PLOTS_DIR = Path(__file__).parent.parent / "plots"
 PLOTS_DIR.mkdir(exist_ok=True)
 
-from lerobot.motors.feetech import FeetechMotorsBus
-from lerobot.motors.motors_bus import Motor, MotorNormMode
+from drivers.feetech import FeetechMotorsBus
+from drivers.motors_bus import Motor, MotorNormMode
 
 # ── Config ────────────────────────────────────────────────────────────────────
 PORT = "/dev/ttyACM0"   # change to match your port (check: ls /dev/tty{USB,ACM}*)

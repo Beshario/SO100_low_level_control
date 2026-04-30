@@ -1,3 +1,4 @@
 matplotlib
 numpy
-# lerobot must be installed separately — see https://github.com/huggingface/lerobot
+pyserial
+feetech-servo-sdk   # installs scservo_sdk
