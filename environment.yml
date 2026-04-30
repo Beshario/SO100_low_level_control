@@ -1,4 +1,4 @@
-name: lerobot
+name: so100
 channels:
   - conda-forge
   - defaults
@@ -8,5 +8,5 @@ dependencies:
   - pip:
       - matplotlib
       - numpy
-      # lerobot pulls in scservo_sdk and all servo drivers
-      - lerobot[feetech]
+      - pyserial
+      - feetech-servo-sdk
