@@ -47,13 +47,14 @@ LATENCY_S = 0.050           # measured round-trip lag for position prediction
 SETTLE_DEG = 1.0
 SETTLE_TICKS = 50           # 50 ticks @ 100 Hz = 0.5 s of stillness
 
+
 TICKS_PER_DEG = 4096 / 360
 # ──────────────────────────────────────────────────────────────────────────────
 
 # ── Shared state (input thread → control thread) ──────────────────────────────
 state = {
-    "Kp": 0.01,
-    "Kd": 0.0,
+    "Kp": 0.25,
+    "Kd": 0.01,
     "target_deg": 30.0,
     "running": True,
     "save_plot": False,

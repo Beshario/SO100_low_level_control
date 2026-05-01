@@ -10,3 +10,4 @@ dependencies:
       - numpy
       - pyserial
       - feetech-servo-sdk
+      - -e .
